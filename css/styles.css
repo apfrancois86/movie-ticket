@@ -1,5 +1,22 @@
+body {
+  background-color: maroon;
+  color: white;
+}
+
 h1 {
   text-align: center;
   background-color: lightyellow;
-  
+  font-family: fantasy;
+  font-weight: bolder;
+  font-size: 200%;
+  color: maroon;
+}
+
+.jumbotron h1 {
+  color: maroon;
+}
+
+
+.receipt {
+  display: none;
 }

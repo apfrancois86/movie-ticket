@@ -14,6 +14,7 @@
     </div>
     <div class="container">
       <form id="movieTicket">
+        <h2>Ticket Purchase Form</h2><br>
         <div class="row" id="age">
           <div class="col-sm-6">
             <label>What is your age?</label>
@@ -66,13 +67,15 @@
          </div><br>
         <div class="row" id="movies">
           <label>What movie would you like to watch today?</label><br>
+          <br><br>
            <div class="col-sm-4 allAges">
              <div class="radio">
                <label>
                  <input type="radio" name="movies" value="Doctor Strange">
+                 <img src="img/doctor.jpg"/><br>
                  Doctor Strange
                </label>
-             </div>
+             </div><br>
              <div class="radio">
                <label>
                  <input type="radio" name="movies" value="Trolls">
@@ -92,7 +95,7 @@
              <div class="radio">
                <label>
                  <input type="radio" name="movies" value="Almost Christmas">
-                 <img src="img/accountant.jpg"/><br>
+                 <img src="img/xmas.jpg"/><br>
                  Almost Christmas
                </label>
              </div>
@@ -102,24 +105,31 @@
             <div class="radio">
               <label>
                 <input type="radio" name="movies" value="Ouiji: Origin of Evil">
+                 <img src="img/ouija.jpg"/><br>
                 Ouiji: Origin of Evil
               </label>
-            </div>
+            </div><br>
             <div class="radio">
               <label>
                 <input type="radio" name="movies" value="The Accountant">
+                <img src="img/accountant.jpg"/><br>
                 The Accountant
               </label>
             </div>
           </div>
         </div><br>
 
-        <button type="submit" class="btn">Buy your ticket now</button>
+        <button type="submit" class="btn-primary">Buy your ticket now</button>
 
       </form>
-      <div id="output">
-        <h3></h3>
-        <h4></h4>
+
+      <div class="receipt">
+        <h2>Movie Ticket Receipt</h2><br>
+        <div id="output">
+          <ul>
+
+          </ul>
+        </div>
       </div>
 
     </div>

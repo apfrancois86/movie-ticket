@@ -6,8 +6,9 @@ function Ticket(age, time, movieName) {
 }
 
 // Tickect
-var pricePaid = function(age, time) {
+var pricePaid = function(age, time, movieName) {
   var price = 10;
+
   if((age === "child" || age === "senior") && (time === "10am" || time === "2pm")) {
     price -= 5;
   } else if((age === "child" || age === "senior") && (time === "6pm" || time === "8pm")) {
@@ -16,8 +17,8 @@ var pricePaid = function(age, time) {
     price -= 3;
   } else {
     price;
-  }
-  return price;
+  } return price;
+
 }
 
 
@@ -32,11 +33,16 @@ $(document).ready(function() {
     var checkedTime = $('input:radio[name=time]:checked').val();
 
     var newTicket = new Ticket(checkedAge, checkedTime, checkedMovies);
-    var newPricePaid = pricePaid(checkedAge, checkedTime);
+    var newPricePaid = pricePaid(checkedAge, checkedTime, checkedMovies);
 
+    if(checkedAge === "child" && (checkedMovies==="Ouiji: Origin of Evil" || checkedMovies ==="The Accountant")) {
+      return alert("You are not old enough! Please select another movie.");
 
-$("#output h3").append(newTicket.age + " " + newTicket.time + " " + newTicket.movieName + " " + newPricePaid);
-
+    } else {
+      $(".receipt").show();
+      $("#movieTicket").hide();
+      $("#output ul").append("<li>"+ "Your age category is:  " + newTicket.age+ "</li>" + "<li>"+ "You purchase a ticket to: " + newTicket.movieName + "</li>" + "<li>"+ "Movie time: " + newTicket.time + "</li>" + "<li>"+ "Your total cost is:  $" + newPricePaid + "</li>");
+    }
 
   });
 });
