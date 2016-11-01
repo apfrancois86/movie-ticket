@@ -13,70 +13,114 @@
       <h1>Portland Cinema</h1>
     </div>
     <div class="container">
-      <div class="row" id="age">
-        <label for="ageInput">Enter your age</label>
-        <input type="text" class="ageInput">
-      </div>
-      <br>
-
-      <form class="form">
-
-        <div class="row" id="allAges">
-          <label>What movie would you like to watch today?</label>
-           <div class="radio">
-             <label>
-               <input type="radio" name="movies" value="doctor">
-               Doctor Strange
-             </label>
+      <form id="movieTicket">
+        <div class="row" id="age">
+          <div class="col-sm-6">
+            <label>What is your age?</label>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="age" value="child">
+                 Child (under 18)
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="age" value="adult">
+                 Adult (18-65)
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="age" value="senior">
+                 Senior (65+)
+               </label>
+             </div>
            </div>
-           <div class="radio">
-             <label>
-               <input type="radio" name="movies" value="trolls">
-               <img src="img/trolls.jpg"/><br>
-               Trolls
-             </label>
-           </div><br>
-           <div class="radio">
-             <label>
-               <input type="radio" name="movies" value="beast">
-               <img src="img/beast.jpg"/><br>
-               Fantastic Beasts
-             </label>
-           </div><br>
-           <div class="radio">
-             <label>
-               <input type="radio" name="movies" value="xmas">
-               <img src="img/accountant.jpg"/><br>
-               Almost Christmas
-             </label>
+           <div class="col-sm-6">
+             <label>what time would you prefer?</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="time" value="10am" class="matinee">
+                  10 am
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="time" value="2pm" class="matinee">
+                  2 pm
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="time" value="6pm" class="evening">
+                  6 pm
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="time" value="8pm" class="evening">
+                  8 pm
+                </label>
+              </div>
+            </div>
+         </div><br>
+        <div class="row" id="movies">
+          <label>What movie would you like to watch today?</label><br>
+           <div class="col-sm-4 allAges">
+             <div class="radio">
+               <label>
+                 <input type="radio" name="movies" value="Doctor Strange">
+                 Doctor Strange
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="movies" value="Trolls">
+                 <img src="img/trolls.jpg"/><br>
+                 Trolls
+               </label>
+             </div><br>
            </div>
-        </div>
+           <div class="col-sm-4 allAges">
+             <div class="radio">
+               <label>
+                 <input type="radio" name="movies" value="Fantastic Beasts">
+                 <img src="img/beast.jpg"/><br>
+                 Fantastic Beasts
+               </label>
+             </div><br>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="movies" value="Almost Christmas">
+                 <img src="img/accountant.jpg"/><br>
+                 Almost Christmas
+               </label>
+             </div>
 
-        <div class="row" id="adults">
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="ouiji">
-              Ouiji: Origin of Evil
-            </label>
+           </div>
+          <div class="col-sm-4 adult">
+            <div class="radio">
+              <label>
+                <input type="radio" name="movies" value="Ouiji: Origin of Evil">
+                Ouiji: Origin of Evil
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="movies" value="The Accountant">
+                The Accountant
+              </label>
+            </div>
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="inferno">
-              Inferno
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="accountant">
-              The Accountant
-            </label>
-          </div>
-        </div>
+        </div><br>
 
-        <div class="row" id=>
+        <button type="submit" class="btn">Buy your ticket now</button>
 
-        </div>
       </form>
+      <div id="output">
+        <h3></h3>
+        <h4></h4>
+      </div>
 
     </div>
   </body>
